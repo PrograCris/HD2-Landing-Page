@@ -1,0 +1,442 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#333;
+    line-height:1.6;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+/*================ NAVBAR ================*/
+
+header{
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:1.5rem;
+    font-weight:700;
+    color:#2563eb;
+}
+
+.menu{
+    display:flex;
+    gap:35px;
+}
+
+.nav-link{
+    color:#333;
+    font-weight:500;
+}
+
+/*================ HERO ================*/
+
+.hero{
+    max-width:1200px;
+    margin:auto;
+    min-height:90vh;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:60px;
+    padding:70px 20px;
+    position:relative;
+}
+
+.titulo{
+    font-size:3.5rem;
+    color:#1e293b;
+    margin-bottom:20px;
+}
+
+.subtitulo{
+    font-size:1.1rem;
+    color:#64748b;
+    margin-bottom:35px;
+}
+
+.botones{
+    display:flex;
+    gap:20px;
+}
+
+.cta{
+    background:#2563eb;
+    color:#fff;
+    padding:15px 35px;
+    border-radius:10px;
+    font-weight:600;
+}
+
+.btn-secundario{
+    border:2px solid #2563eb;
+    color:#2563eb;
+    padding:15px 35px;
+    border-radius:10px;
+    font-weight:600;
+}
+
+.hero-imagen img{
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.scroll-indicador{
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:2rem;
+    color:#2563eb;
+}
+
+/*================ BENEFICIOS ================*/
+
+.beneficios{
+    padding:90px 20px;
+    background:#fff;
+}
+
+.beneficios h2{
+    text-align:center;
+    font-size:2.3rem;
+    margin-bottom:50px;
+}
+
+.contenedor-beneficios{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.tarjeta{
+    background:#f8fafc;
+    padding:35px 30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.tarjeta i{
+    font-size:3rem;
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.tarjeta h3{
+    margin-bottom:15px;
+    color:#1e293b;
+}
+
+/*================ SERVICIOS ================*/
+
+.servicios{
+    padding:90px 20px;
+}
+
+.servicios h2{
+    text-align:center;
+    font-size:2.3rem;
+    margin-bottom:50px;
+}
+
+.cards-servicios{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.card-servicio{
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.card-servicio i{
+    font-size:3rem;
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.card-servicio h3{
+    margin-bottom:15px;
+}
+
+/*================ CTA FINAL ================*/
+
+.cta-final{
+    background:#2563eb;
+    color:#fff;
+    text-align:center;
+    padding:90px 20px;
+}
+
+.cta-final h2{
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+
+.cta-final p{
+    margin-bottom:35px;
+}
+
+.cta-final .cta{
+    background:#fff;
+    color:#2563eb;
+}
+
+/*================ FOOTER ================*/
+
+footer{
+    background:#0f172a;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+}
+
+/*================ RESPONSIVE ================*/
+
+@media(max-width:900px){
+
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .botones{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .contenedor-beneficios,
+    .cards-servicios{
+        grid-template-columns:1fr;
+    }
+
+    .menu{
+        display:none;
+    }
+
+    .titulo{
+        font-size:2.5rem;
+    }
+
+}
+
+/*================ ANIMACIONES ================*/
+
+/*================ ANIMACIONES ================*/
+
+/* 1. Fade In del título */
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+.titulo{
+    animation:aparecer 1.5s ease-in forwards;
+}
+
+/* 2. Slide In del subtítulo */
+
+@keyframes subir{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.subtitulo{
+    opacity:0;
+    animation:subir 1.2s ease-out .5s forwards;
+}
+
+/* 3. Pulso del botón */
+
+@keyframes pulso{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.08);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+.cta{
+    animation:pulso 1.8s ease-in-out infinite;
+}
+
+/* 4. Hover del botón */
+
+.cta{
+    transition:background-color .3s ease, transform .3s ease;
+}
+
+.cta:hover{
+    background:#1e40af;
+    transform:translateY(-3px);
+}
+
+/* 5. Hover de tarjetas */
+
+.tarjeta{
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.tarjeta:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 24px rgba(0,0,0,.18);
+}
+
+/* 6. Aparición escalonada */
+
+@keyframes entrar{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.tarjeta{
+    opacity:0;
+    animation:entrar .8s ease-out forwards;
+}
+
+.tarjeta:nth-child(1){
+    animation-delay:.2s;
+}
+
+.tarjeta:nth-child(2){
+    animation-delay:.4s;
+}
+
+.tarjeta:nth-child(3){
+    animation-delay:.6s;
+}
+
+/* 7. Rotación 3D */
+
+.beneficios{
+    perspective:1000px;
+}
+
+.tarjeta{
+    transform-style:preserve-3d;
+}
+
+.tarjeta:hover{
+    transform:rotateY(12deg);
+}
+
+/* 8. Subrayado del menú */
+
+.nav-link{
+    position:relative;
+}
+
+.nav-link::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-4px;
+    width:0;
+    height:2px;
+    background:#2563eb;
+    transition:width .3s ease;
+}
+
+.nav-link:hover::after{
+    width:100%;
+}
+
+/* 9. Flecha rebotando */
+
+@keyframes rebote{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(12px);
+    }
+}
+
+.scroll-indicador{
+    animation:rebote 1.4s ease-in-out infinite;
+}
+
+/* 10. Scroll Reveal */
+
+.oculto{
+    opacity:0;
+    transform:translateY(50px);
+    transition:opacity .8s ease, transform .8s ease;
+}
+
+.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Accesibilidad */
+
+@media(prefers-reduced-motion:reduce){
+    *{
+        animation:none !important;
+        transition:none !important;
+    }
+}
