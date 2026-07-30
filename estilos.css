@@ -478,3 +478,84 @@ footer{
     color:#64748b;
     font-size:.95rem;
 }
+
+/*================ FORMULARIO CONTACTO ================*/
+
+.formulario-contacto{
+    max-width:600px;
+    margin:40px auto 0;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea{
+    width:100%;
+    padding:15px 18px;
+    border:none;
+    border-radius:12px;
+    font-family:'Poppins',sans-serif;
+    font-size:1rem;
+    outline:none;
+    background:#fff;
+    color:#333;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+    transition:.3s ease;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+
+.formulario-contacto textarea{
+    resize:none;
+    min-height:130px;
+}
+
+.formulario-contacto small{
+    color:#dbeafe;
+    font-size:.9rem;
+    margin-top:-5px;
+}
+
+.formulario-contacto .cta{
+    border:none;
+    cursor:pointer;
+    width:220px;
+    margin:auto;
+    animation:none;
+    transition:.3s ease;
+}
+
+.formulario-contacto .cta:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+}
+
+@keyframes formularioEntrada{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.formulario-contacto{
+    animation:formularioEntrada .8s ease forwards;
+}
+
+@media(max-width:600px){
+    .formulario-contacto{
+        width:100%;
+    }
+
+    .formulario-contacto .cta{
+        width:100%;
+    }
+}
