@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
-  }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PrograCris/HD2-Landing-Page.git"
