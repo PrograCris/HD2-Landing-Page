@@ -174,37 +174,59 @@
 
     </section>
 
-    <!--================ CTA ================-->
     <!--================ CONTACTO ================-->
 
-    <section id="contacto" class="cta-final oculto">
+<section id="contacto" class="cta-final oculto">
 
-        <h2>Contáctanos y empieza hoy mismo</h2>
+    <h2>Contáctanos y empieza hoy mismo</h2>
 
-        <p>
-            Déjanos tus datos y un asesor se comunicará contigo.
-        </p>
+    <p>
+        Déjanos tus datos y un asesor se comunicará contigo.
+    </p>
 
-        <form class="formulario-contacto">
+    <form id="formulario" class="formulario-contacto">
 
-            <input type="text" placeholder="Escribe tu nombre completo" required>
+        <input 
+            type="text"
+            name="nombre"
+            placeholder="Escribe tu nombre completo"
+            required
+        >
 
-            <input type="email" placeholder="Ingresa tu correo electrónico" required>
+        <input 
+            type="email"
+            name="correo"
+            placeholder="Ingresa tu correo electrónico"
+            required
+        >
 
-            <textarea placeholder="Cuéntanos cómo podemos ayudarte" rows="5"></textarea>
+        <select name="plan">
+            <option value="gratis">Gratis</option>
+            <option value="emprendedor">Emprendedor</option>
+            <option value="empresa">Empresa</option>
+        </select>
 
-            <small>
-                Nuestro equipo responderá tu mensaje lo antes posible.
-            </small>
+        <textarea 
+            name="mensaje"
+            placeholder="Cuéntanos cómo podemos ayudarte"
+            rows="5"
+        ></textarea>
 
-            <button type="submit" class="cta">
-                Enviar mensaje
-            </button>
+        <button type="submit" class="cta">
+            Enviar mensaje
+        </button>
 
-        </form>
+    </form>
 
-    </section>
+    <p id="error" style="color:red"></p>
 
+    <ul id="lista-contactos"></ul>
+
+    <button id="guardar" class="cta">
+        Descargar contactos (JSON)
+    </button>
+
+</section>
     <!--================ FOOTER ================-->
 
     <footer>
@@ -219,4 +241,4 @@
 
 </body>
 
-</html>
+</html> 
