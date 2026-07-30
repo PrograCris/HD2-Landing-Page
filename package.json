@@ -1,0 +1,27 @@
+{
+  "name": "hd2",
+  "version": "1.0.0",
+  "description": "Este proyecto consiste en una landing page desarrollada para promocionar servicios y herramientas dirigidas a emprendedores. El objetivo es presentar la información de forma clara y atractiva, utilizando una interfaz moderna y fácil de navegar.",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrograCris/HD2-Landing-Page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/PrograCris/HD2-Landing-Page/issues"
+  },
+  "homepage": "https://github.com/PrograCris/HD2-Landing-Page#readme",
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vite": "^8.1.5"
+  }
+}
