@@ -110,8 +110,29 @@ header{
 }
 
 .hero-imagen img{
-    border-radius:20px;
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
+    border-radius:25px;
+    box-shadow:0 30px 60px rgba(37,99,235,.25);
+    transition:.4s ease;
+    border:6px solid #fff;
+}
+
+.hero-imagen img:hover{
+    transform:translateY(-12px) scale(1.02);
+    box-shadow:0 40px 80px rgba(37,99,235,.35);
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    right:40px;
+    top:80px;
+    background:#60a5fa;
+    opacity:.18;
+    border-radius:50%;
+    filter:blur(90px);
+    z-index:-1;
 }
 
 .scroll-indicador{
@@ -324,8 +345,8 @@ footer{
 }
 
 .cta:hover{
-    background:#1e40af;
-    transform:translateY(-3px);
+    transform:translateY(-5px);
+    box-shadow:0 20px 45px rgba(37,99,235,.45);
 }
 
 /* 5. Hover de tarjetas */
@@ -439,4 +460,21 @@ footer{
         animation:none !important;
         transition:none !important;
     }
+}
+
+.estadisticas{
+    display:flex;
+    gap:40px;
+    margin-top:45px;
+}
+
+.estadisticas h3{
+    color:#2563eb;
+    font-size:2rem;
+    margin-bottom:5px;
+}
+
+.estadisticas span{
+    color:#64748b;
+    font-size:.95rem;
 }
